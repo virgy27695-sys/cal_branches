@@ -29,6 +29,8 @@
     <button onclick="append('-')">-</button>
     <button onclick="calculate()">=</button>
     <button onclick="clearResult()">C</button>
+    <button onclick="square()">x²</button>
+    <button onclick="cube()">x³</button>
 
     <script>
         function append(value) {
@@ -47,6 +49,17 @@
         function clearResult() {
             document.getElementById("result").value = "";
         }
+
+        function square() {
+            let result = document.getElementById("result");
+            result.value = Math.pow(result.value, 2);
+        }
+
+        function cube() {
+            let result = document.getElementById("result");
+            result.value = Math.pow(result.value, 3);
+        }
     </script>
 </body>
 </html>
+
